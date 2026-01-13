@@ -84,23 +84,6 @@
                     "defaultValue": 1
                 },
                 {
-                    "title": "Robot",
-                    "description": "The robot you are scouting this match, based on driver station position.",
-                    "type": "select",
-                    "required": true,
-                    "code": "robot",
-                    "formResetBehavior": "preserve",
-                    "defaultValue": "R1",
-                    "choices": {
-                        "R1": "Red 1",
-                        "R2": "Red 2",
-                        "R3": "Red 3",
-                        "B1": "Blue 1",
-                        "B2": "Blue 2",
-                        "B3": "Blue 3"
-                    }
-                },
-                {
                     "title": "Team Number",
                     "description": "The team number of the robot you're scouting.",
                     "type": "number",
@@ -110,20 +93,6 @@
                     "defaultValue": 0,
                     "min": 0,
                     "max": 19999
-                },
-                {
-                    "title": "Starting Position",
-                    "description": "The starting position of the robot.",
-                    "type": "select",
-                    "required": true,
-                    "code": "Prsp",
-                    "formResetBehavior": "reset",
-                    "defaultValue": "",
-                    "choices": {
-                        "R1": "Outpost Side",
-                        "R2": "Middle",
-                        "R3": "Depot Side"
-                    }
                 },
                 {
                     "title": "No Show",
@@ -159,6 +128,16 @@
                     "min": 0,
                     "step": 1
                 },
+                 {
+                    "title": Missed Fuel",
+                    "type": "counter",
+                    "required": false,
+                    "code": "auf",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 0,
+                    "min": 0,
+                    "step": 1
+                },
                 {
                     "title": "Climbed Tower",
                     "description": "The height the robot climbed in auto",
@@ -175,16 +154,6 @@
                         "F": "Failed Climb"
                     }
                 },
-                {
-                    "title": "Auto Foul",
-                    "type": "counter",
-                    "required": false,
-                    "code": "auf",
-                    "formResetBehavior": "reset",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "step": 1
-                }
             ]
         },
         {
@@ -228,6 +197,16 @@
                     "min": 0,
                     "step": 1
                 },
+                 {
+                    "title": Missed Fuel",
+                    "type": "counter",
+                    "required": false,
+                    "code": "auf",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 0,
+                    "min": 0,
+                    "step": 1
+                },
                 {
                     "title": "Human Fuel Scored",
                     "description": "The amount of fuel scored directly by the human player",
@@ -240,32 +219,13 @@
                     "step": 1
                 },
                 {
-                    "title": "Crossed Field/Played Defense?",
+                    "title": "Played Defense?",
                     "type": "boolean",
                     "required": false,
                     "code": "CFPDT",
                     "formResetBehavior": "reset",
                     "defaultValue": false
                 },
-                {
-                    "title": "Was Robot Defended by Other Alliance?",
-                    "type": "boolean",
-                    "required": false,
-                    "code": "DEFEg",
-                    "formResetBehavior": "reset",
-                    "defaultValue": false
-                },
-                {
-                    "title": "Touched Opposing Tower",
-                    "type": "counter",
-                    "required": false,
-                    "code": "Fou/Tech",
-                    "description": "The number of times the opposing tower was touched",
-                    "formResetBehavior": "reset",
-                    "defaultValue": 0,
-                    "min": 0,
-                    "step": 1
-                }
             ]
         },
         {
@@ -287,7 +247,7 @@
                     }
                 },
                 {
-                    "title": "Died?",
+                    "title": "Did it break?",
                     "type": "boolean",
                     "required": false,
                     "code": "DEg",
@@ -295,7 +255,7 @@
                     "defaultValue": false
                 },
                 {
-                    "title": "Tipped/Fell Over?",
+                    "title": "Did it Tip/Fell Over?",
                     "type": "boolean",
                     "required": false,
                     "code": "TFOT",
@@ -307,17 +267,6 @@
         {
             "name": "Postmatch",
             "fields": [
-                {
-                    "title": "Offense Skill",
-                    "type": "range",
-                    "required": false,
-                    "code": "or",
-                    "formResetBehavior": "reset",
-                    "defaultValue": 3,
-                    "min": 1,
-                    "max": 5,
-                    "step": 1
-                },
                 {
                     "title": "Defensive Skill",
                     "type": "range",
@@ -342,6 +291,30 @@
                         "Red": "Red Card"
                     }
                 },
+                  {
+                    "title": "Rank points",
+                    "type": "range",
+                    "required": false,
+                    "code": "or",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 3,
+                    "min": 1,
+                    "max": 6,
+                    "step": 1
+                },
+                 { "name": "Rank points",
+                   "code": "ds",
+                   "type": "radio",
+                   "choices": {
+                        "n": "Win<br>",
+                        "a": "Tie<br>",
+                        "v": "Energized RP<br>",
+                        "b": "Supercharged RP<br>"
+                        "c": "Traversal RP<br>"
+                        "x": "None<br>"
+        },
+      "defaultValue": "x"
+              },
                 {
                     "title": "Comments",
                     "type": "text",
