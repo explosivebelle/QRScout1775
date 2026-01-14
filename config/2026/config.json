@@ -85,7 +85,7 @@
                 },
                 {
                     "title": "Team Number",
-                    "description": "The team number of the robot you're scouting.",
+                    "description": "The team number of the robot youre scouting.",
                     "type": "number",
                     "required": true,
                     "code": "teamNumber",
@@ -147,13 +147,13 @@
                     "defaultValue": "No",
                     "formResetBehavior": "reset",
                     "choices": {
-                        "No": "Didn't Climb",
+                        "No": "Didnt Climb",
                         "L1": "Level 1",
                         "L2": "Level 2",
                         "L3": "Level 3",
                         "F": "Failed Climb"
                     }
-                },
+                }
             ]
         },
         {
@@ -198,7 +198,7 @@
                     "step": 1
                 },
                  {
-                    "title": Missed Fuel",
+                    "title": "Missed Fuel",
                     "type": "counter",
                     "required": false,
                     "code": "auf",
@@ -225,7 +225,7 @@
                     "code": "CFPDT",
                     "formResetBehavior": "reset",
                     "defaultValue": false
-                },
+                }
             ]
         },
         {
@@ -239,7 +239,7 @@
                     "formResetBehavior": "reset",
                     "defaultValue": "No",
                     "choices": {
-                        "No": "Didn't Climb",
+                        "No": "Didnt Climb",
                         "L1": "Level 1",
                         "L2": "Level 2",
                         "L3": "Level 3",
@@ -307,10 +307,9 @@
                    "type": "radio",
                    "choices": {
                         "n": "Win<br>",
-                        "a": "Tie<br>",
-                        "v": "Energized RP<br>",
-                        "b": "Supercharged RP<br>"
-                        "c": "Traversal RP<br>"
+                        "a": "Energized RP<br>",
+                        "v": "Supercharged RP<br>",
+                        "b": "Traversal RP<br>",
                         "x": "None<br>"
         },
       "defaultValue": "x"
@@ -327,5 +326,4 @@
                 }
             ]
         }
-    ]
-}
+    ]}
