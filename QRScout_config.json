@@ -1,1 +1,376 @@
-{"title":"QRScout","page_title":"Rebuilt","delimiter":"\t","teamNumber":2713,"floatingField":{"show":false,"codeValue":"teamNumber"},"theme":{"light":{"background":"0 0% 100%","foreground":"0 0% 3.9%","card":"0 0% 100%","card_foreground":"0 0% 3.9%","popover":"0 0% 100%","popover_foreground":"0 0% 3.9%","primary":"354.44 71.3% 47.9%","primary_foreground":"0 85.7% 97.3%","secondary":"0 0% 96.1%","secondary_foreground":"0 0% 9%","muted":"0 0% 96.1%","muted_foreground":"0 0% 45.1%","accent":"0 0% 96.1%","accent_foreground":"0 0% 9%","destructive":"0 84.2% 60.2%","destructive_foreground":"0 0% 98%","border":"0 0% 89.8%","input":"0 0% 89.8%","ring":"354.44 71.3% 47.9%","chart_1":"12 76% 61%","chart_2":"173 58% 39%","chart_3":"197 37% 24%","chart_4":"43 74% 66%","chart_5":"27 87% 67%"},"dark":{"background":"0 0% 100%","foreground":"0 0% 3.9%","card":"0 0% 100%","card_foreground":"0 0% 3.9%","popover":"0 0% 100%","popover_foreground":"0 0% 3.9%","primary":"354.44 71.3% 47.9%","primary_foreground":"0 85.7% 97.3%","secondary":"0 0% 96.1%","secondary_foreground":"0 0% 9%","muted":"0 0% 96.1%","muted_foreground":"0 0% 45.1%","accent":"0 0% 96.1%","accent_foreground":"0 0% 9%","destructive":"0 84.2% 60.2%","destructive_foreground":"0 0% 98%","border":"0 0% 89.8%","input":"0 0% 89.8%","ring":"354.44 71.3% 47.9%","chart_1":"12 76% 61%","chart_2":"173 58% 39%","chart_3":"197 37% 24%","chart_4":"43 74% 66%","chart_5":"27 87% 67%"}},"sections":[{"name":"Prematch","fields":[{"title":"Scouter Initials","description":"Enter the initials of the scouter.","type":"text","required":true,"code":"scouter","formResetBehavior":"preserve","defaultValue":""},{"title":"Match Number","description":"Select the match number.","type":"TBA-match-number","required":true,"code":"matchNumber","formResetBehavior":"increment","defaultValue":1},{"title":"Team Number","description":"Select the team number.","type":"TBA-match-number","required":true,"code":"matchNumber","formResetBehavior":"increment","defaultValue":1},{"title":"No Show","description":"Check if the robot did not show up for the match.","type":"boolean","required":false,"code":"noShow","formResetBehavior":"reset","defaultValue":false}]},{"name":"Autonomous","fields":[{"title":"Moved?","description":"Check if the robot moved during autonomous.","type":"boolean","required":false,"code":"Mved","formResetBehavior":"reset","defaultValue":false},{"title":"Fuel scored","description":"The amount of fuel scored in auto","type":"counter","required":false,"code":"FIA","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1},{"title":"Missed Fuel","type":"counter","required":false,"code":"auf","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1},{"title":"Climbed Tower","description":"The height the robot climbed in auto","type":"select","required":true,"code":"climbedAuto","formResetBehavior":"reset","defaultValue":"No","choices":{"No":"Didn't Climb","L1":"Level 1","F":"Failed Climb"}},{"title":"Climb location","description":"Where on the tower did the robot climb?","type":"select","required":false,"code":"climbPos","formResetBehavior":"reset","defaultValue":"No","choices":{"No":"No Climb","Out":"Output Side","Mid":"Middle","Dep":"Depot Side"}},{"title":"Auto Foul","type":"counter","required":false,"code":"auf","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1}]},{"name":"Teleop","fields":[{"title":"Fuel Collected From Ground","description":"Collected fuel from the ground","type":"boolean","required":false,"code":"FFG","formResetBehavior":"reset","defaultValue":false},{"title":"Fuel Collected From Player","description":"Collected fuel from the human player","type":"boolean","required":false,"code":"FFHP","formResetBehavior":"reset","defaultValue":false},{"title":"Fuel Collected From Depot","description":"Collected fuel from the depot","type":"boolean","required":false,"code":"FFD","formResetBehavior":"reset","defaultValue":false},{"title":"Robot Fuel Scored","description":"The amount of fuel scored in teleop (by the robot)","type":"counter","required":false,"code":"FIT","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1},{"title":"Missed Fuel","type":"counter","required":false,"code":"auf","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1},{"title":"Human Fuel Scored","description":"The amount of fuel scored directly by the human player","type":"counter","required":false,"code":"HFS","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1},{"title":"Played Defense?","type":"boolean","required":false,"code":"CFPDT","formResetBehavior":"reset","defaultValue":false},{"title":"Touched Opposing Tower","description":"The number of times the opposing tower was touched","type":"counter","required":false,"code":"Fou/Tech","formResetBehavior":"reset","defaultValue":0,"min":0,"step":1}]},{"name":"Endgame","fields":[{"title":"Climbed Tower","type":"select","required":true,"code":"climbed","formResetBehavior":"reset","defaultValue":"No","choices":{"No":"Didn't Climb","L1":"Level 1","L2":"Level 2","L3":"Level 3","F":"Failed Climb"}},{"title":"Broke?","type":"boolean","required":false,"code":"DEg","formResetBehavior":"reset","defaultValue":false},{"title":"Tipped/Fell Over?","type":"boolean","required":false,"code":"TFOT","formResetBehavior":"reset","defaultValue":false}]},{"name":"Postmatch","fields":[{"title":"Offense Skill","type":"range","required":false,"code":"or","formResetBehavior":"reset","defaultValue":3,"min":1,"max":5,"step":1},{"title":"Defensive Skill","type":"range","required":false,"code":"dr","formResetBehavior":"reset","defaultValue":0,"min":0,"max":5,"step":1},{"title":"Yellow/Red Card","type":"select","required":true,"code":"yc","formResetBehavior":"reset","defaultValue":"No Card","choices":{"No Card":"No Card","Yellow":"Yellow Card","Red":"Red Card"}},{"title":"Rank points","type":"range","required":false,"code":"or","formResetBehavior":"reset","defaultValue":0,"min":1,"max":6,"step":1},{"title":"Rank points","type":"select","required":true,"code":"ds","formResetBehavior":"reset","defaultValue":"x","choices":{"n":"Win","a":"Energized RP","v":"Supercharged RP","b":"Traversal RP","x":"None"}},{"title":"Comments","type":"text","required":false,"code":"co","formResetBehavior":"reset","defaultValue":"","min":0,"max":100}]}]}
+{
+  "title": "QRScout",
+  "page_title": "Rebuilt",
+  "delimiter": "\t",
+  "teamNumber": 2713,
+  "floatingField": {
+    "show": false,
+    "codeValue": "teamNumber"
+  },
+  "theme": {
+    "light": {
+      "background": "0 0% 100%",
+      "foreground": "0 0% 3.9%",
+      "card": "0 0% 100%",
+      "card_foreground": "0 0% 3.9%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "0 0% 3.9%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 96.1%",
+      "secondary_foreground": "0 0% 9%",
+      "muted": "0 0% 96.1%",
+      "muted_foreground": "0 0% 45.1%",
+      "accent": "0 0% 96.1%",
+      "accent_foreground": "0 0% 9%",
+      "destructive": "0 84.2% 60.2%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 89.8%",
+      "input": "0 0% 89.8%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "12 76% 61%",
+      "chart_2": "173 58% 39%",
+      "chart_3": "197 37% 24%",
+      "chart_4": "43 74% 66%",
+      "chart_5": "27 87% 67%"
+    },
+    "dark": {
+      "background": "0 0% 100%",
+      "foreground": "0 0% 3.9%",
+      "card": "0 0% 100%",
+      "card_foreground": "0 0% 3.9%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "0 0% 3.9%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 96.1%",
+      "secondary_foreground": "0 0% 9%",
+      "muted": "0 0% 96.1%",
+      "muted_foreground": "0 0% 45.1%",
+      "accent": "0 0% 96.1%",
+      "accent_foreground": "0 0% 9%",
+      "destructive": "0 84.2% 60.2%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 89.8%",
+      "input": "0 0% 89.8%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "12 76% 61%",
+      "chart_2": "173 58% 39%",
+      "chart_3": "197 37% 24%",
+      "chart_4": "43 74% 66%",
+      "chart_5": "27 87% 67%"
+    }
+  },
+  "sections": [
+    {
+      "name": "Prematch",
+      "fields": [
+        {
+          "title": "Scouter Initials",
+          "description": "Enter the initials of the scouter.",
+          "type": "text",
+          "required": true,
+          "code": "scouter",
+          "formResetBehavior": "preserve",
+          "defaultValue": ""
+        },
+        {
+          "title": "Match Number",
+          "description": "Select the match number.",
+          "type": "TBA-match-number",
+          "required": true,
+          "code": "matchNumber",
+          "formResetBehavior": "increment",
+          "defaultValue": 1
+        },
+        {
+          "title": "Team Number",
+          "description": "Select the team number.",
+          "type": "TBA-match-number",
+          "required": true,
+          "code": "matchNumber",
+          "formResetBehavior": "increment",
+          "defaultValue": 1
+        },
+        {
+          "title": "No Show",
+          "description": "Check if the robot did not show up for the match.",
+          "type": "boolean",
+          "required": false,
+          "code": "noShow",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+        {
+          "title": "Moved?",
+          "description": "Check if the robot moved during autonomous.",
+          "type": "boolean",
+          "required": false,
+          "code": "Mved",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel scored",
+          "description": "The amount of fuel scored in auto",
+          "type": "counter",
+          "required": false,
+          "code": "FIA",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Missed Fuel",
+          "type": "counter",
+          "required": false,
+          "code": "auf",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Climbed Tower",
+          "description": "The height the robot climbed in auto",
+          "type": "select",
+          "required": true,
+          "code": "climbedAuto",
+          "formResetBehavior": "reset",
+          "defaultValue": "No",
+          "choices": {
+            "No": "Didn't Climb",
+            "L1": "Level 1",
+            "F": "Failed Climb"
+          }
+        },
+        {
+          "title": "Climb location",
+          "description": "Where on the tower did the robot climb?",
+          "type": "select",
+          "required": false,
+          "code": "climbPos",
+          "formResetBehavior": "reset",
+          "defaultValue": "No",
+          "choices": {
+            "No": "No Climb",
+            "Out": "Output Side",
+            "Mid": "Middle",
+            "Dep": "Depot Side"
+          }
+        },
+        {
+          "title": "Auto Foul",
+          "type": "counter",
+          "required": false,
+          "code": "auf",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "title": "Fuel Collected From Ground",
+          "description": "Collected fuel from the ground",
+          "type": "boolean",
+          "required": false,
+          "code": "FFG",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From Player",
+          "description": "Collected fuel from the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "FFHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From Depot",
+          "description": "Collected fuel from the depot",
+          "type": "boolean",
+          "required": false,
+          "code": "FFD",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Robot Fuel Scored",
+          "description": "The amount of fuel scored in teleop (by the robot)",
+          "type": "counter",
+          "required": false,
+          "code": "FIT",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Missed Fuel",
+          "type": "counter",
+          "required": false,
+          "code": "auf",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Human Fuel Scored",
+          "description": "The amount of fuel scored directly by the human player",
+          "type": "counter",
+          "required": false,
+          "code": "HFS",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Played Defense?",
+          "type": "boolean",
+          "required": false,
+          "code": "CFPDT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Touched Opposing Tower",
+          "description": "The number of times the opposing tower was touched",
+          "type": "counter",
+          "required": false,
+          "code": "Fou/Tech",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "fields": [
+        {
+          "title": "Climbed Tower",
+          "type": "select",
+          "required": true,
+          "code": "climbed",
+          "formResetBehavior": "reset",
+          "defaultValue": "No",
+          "choices": {
+            "No": "Didn't Climb",
+            "L1": "Level 1",
+            "L2": "Level 2",
+            "L3": "Level 3",
+            "F": "Failed Climb"
+          }
+        },
+        {
+          "title": "Broke?",
+          "type": "boolean",
+          "required": false,
+          "code": "DEg",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Tipped/Fell Over?",
+          "type": "boolean",
+          "required": false,
+          "code": "TFOT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "fields": [
+        {
+          "title": "Offense Skill",
+          "type": "range",
+          "required": false,
+          "code": "or",
+          "formResetBehavior": "reset",
+          "defaultValue": 3,
+          "min": 1,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "title": "Defensive Skill",
+          "type": "range",
+          "required": false,
+          "code": "dr",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "title": "Yellow/Red Card",
+          "type": "select",
+          "required": true,
+          "code": "yc",
+          "formResetBehavior": "reset",
+          "defaultValue": "No Card",
+          "choices": {
+            "No Card": "No Card",
+            "Yellow": "Yellow Card",
+            "Red": "Red Card"
+          }
+        },
+        {
+          "title": "Rank points",
+          "type": "range",
+          "required": false,
+          "code": "or",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 1,
+          "max": 6,
+          "step": 1
+        },
+        {
+          "title": "Rank points",
+          "type": "select",
+          "required": true,
+          "code": "ds",
+          "formResetBehavior": "reset",
+          "defaultValue": "x",
+          "choices": {
+            "n": "Win",
+            "a": "Energized RP",
+            "v": "Supercharged RP",
+            "b": "Traversal RP",
+            "x": "None"
+          }
+        },
+        {
+          "title": "Comments",
+          "type": "text",
+          "required": false,
+          "code": "co",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ]
+}
